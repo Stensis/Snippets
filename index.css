@@ -142,3 +142,31 @@ body {
     transform: scale(1) translate(0, 0);
   }
 }
+
+
+@media (max-width: 768px) {
+  .container {
+    grid-template-columns: 1fr; 
+    height: auto;
+  }
+
+  .image-field {
+    height: auto; 
+    order: -1; 
+  }
+
+  .tabs {
+    height: auto; 
+  }
+
+  .tab-header {
+    padding-left: 5vw;
+    padding-right: 5vw;
+  }
+
+  .tablink p,
+  .tablink a {
+    display: block;
+  }
+}
+
