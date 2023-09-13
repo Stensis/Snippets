@@ -1,26 +1,26 @@
 function openTab(tabName) {
-    console.log("Tab hovered: ", tabName);  // debug log
-  
-    // Hide all tab contents
-    let contents = document.querySelectorAll(".content");
-    contents.forEach((content) => {
-        content.style.display = "none";
-    });
+  console.log("Tab hovered: ", tabName); // debug log
 
-    // Reset all dots to default color
-    const dots = document.querySelectorAll(".dot");
-    dots.forEach((dot) => {
-        dot.style.backgroundColor = "rgb(223, 207, 62)";
-    });
+  // Hide all tab contents
+  let contents = document.querySelectorAll(".content");
+  contents.forEach((content) => {
+    content.style.display = "none";
+  });
 
-    // Update active dot based on the tab
-    if (tabName === 'tab1') {
-        dots[0].style.backgroundColor = "rgb(231, 239, 247)";
-    } else if (tabName === 'tab2') {
-        dots[1].style.backgroundColor = "rgb(231, 239, 247)";
-    } else if (tabName === 'tab3') {
-        dots[2].style.backgroundColor = "rgb(231, 239, 247)";
-    }
+  // Reset all dots to default color
+  const dots = document.querySelectorAll(".dot");
+  dots.forEach((dot) => {
+    dot.style.backgroundColor = "rgb(223, 207, 62)";
+  });
+
+  // Update active dot based on the tab
+  if (tabName === "tab1") {
+    dots[0].style.backgroundColor = "rgb(231, 239, 247)";
+  } else if (tabName === "tab2") {
+    dots[1].style.backgroundColor = "rgb(231, 239, 247)";
+  } else if (tabName === "tab3") {
+    dots[2].style.backgroundColor = "rgb(231, 239, 247)";
+  }
 
   // Show the hovered tab's content
   document.getElementById(tabName).style.display = "block";
@@ -45,6 +45,17 @@ function resetTab() {
   }
 }
 
+// window.onload = function () {
+//   openTab("tab1");
+// };
+
 window.onload = function () {
   openTab("tab1");
+
+  document.querySelectorAll(".dot").forEach((dot) => {
+    dot.addEventListener("click", function () {
+      const tabName = this.getAttribute("data-tab");
+      openTab(tabName);
+    });
+  });
 };
