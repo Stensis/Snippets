@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Vertical Toggle Header</title>
+        <link rel="stylesheet" href="index.css">
+    </head>
+    <body>
+        <div class="container">
+            <div class="tabs">
+                <header>
+                    <h4 class="header">ADVANCE.<br /> IMPACT.<br /> EVERYDAY.</h4>
+                </header>
+
+                <div class="tab-header">
+                    <hr />
+                    <button class="tablink" onmouseover="openTab('tab1')"
+                        onmouseout="resetTab()">
+                        <h4>Energy Solutions</h4>
+                        <p>
+                            Our companies have expertise in the following areas:
+                            Independent Power Production (IPP), Petroleum
+                            Supply,
+                            Petroleum Distribution, Petroleum Trading,
+                            Engineering,
+                            Procurement, Infrastructure Construction and
+                            Services
+                            (EPC & Services), Solar Commercial and Industrial
+                            Solutions (SC&I).
+                        </p>
+                        <a href="/discover">Discover</a>
+                    </button>
+                    <button class="tablink" onmouseover="openTab('tab2')"
+                        onmouseout="resetTab()">
+                        <h4> Estate </h4>
+                        <p>
+                            Our retail, commercial and residential real estate
+                            projects include a 35,000sqm shopping centre (The
+                            Hub
+                            Karen), a 6,000sqm office block and residential
+                            properties in Kenya.
+                        </p>
+                        <a href="/discover">Discover</a>
+                    </button>
+                    <button class="tablink" onmouseover="openTab('tab3')"
+                        onmouseout="resetTab()">
+                        <h4>Conservation and Hospitality</h4>
+                        <p>
+                            Conservation and Hospitality
+                            At the heart of our ongoing commitment to
+                            environmental
+                            conservation is Mount Kenya Wildlife Conservancy,
+                            home
+                            to the award-winning Fairmont Mount Kenya Safari
+                            Club.
+                        </p>
+                        <a href="/discover">Discover</a>
+                    </button>
+                </div>
+            </div>
+
+            <div class="image-field">
+                <div id="tab1" class="content">
+                    <div class="dot-container">
+                        <div class="dot active"></div>
+                        <div class="dot"></div>
+                        <div class="dot"></div>
+                    </div>
+                    <img
+                        src="https://mountkenyawildlifeconservancy.org/storage/12/62f141a37735c_IMAGE-2.jpg"
+                        alt="image-1-pic" />
+                </div>
+
+                <div id="tab2" class="content">
+                    <div class="dot-container">
+                        <div class="dot"></div>
+                        <div class="dot active"></div>
+                        <div class="dot"></div>
+                    </div>
+                    <img
+                        src="https://mountkenyawildlifeconservancy.org/storage/47/62f143280704a_IMAGE-10.jpg"
+                        alt="image-2-pic" />
+                </div>
+
+                <div id="tab3" class="content">
+                    <div class="dot-container">
+                        <div class="dot"></div>
+                        <div class="dot"></div>
+                        <div class="dot active"></div>
+                    </div>
+                    <img
+                        src="https://mountkenyawildlifeconservancy.org/storage/79/62f1438ce8360_IMAGE-17.jpg"
+                        alt="image-3-pic" />
+                </div>
+            </div>
+            <script src="index.js" defer></script>
+        </body>
+    </html>

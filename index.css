@@ -1,0 +1,144 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: rgb(3, 3, 73);
+  overflow: hidden;
+}
+
+.header {
+  color: rgb(253, 195, 0);
+  font-size: 50px;
+  padding-left: 0vw;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: 100vh;
+}
+
+.tabs {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px; 
+  height: 100%; 
+}
+
+.tabs header {
+  text-align: center;
+  color: white;
+  flex: 0 0 auto; 
+}
+
+.tab-header {
+  padding-left: 16vw;
+  padding-right: 5vw;
+}
+
+.tab-header p {
+  color: rgb(160, 178, 201);
+}
+.tab-header a {
+  text-decoration: none;
+  color: rgb(253, 195, 0);
+}
+.tablink {
+  padding: 10px;
+  color: white;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  width: 100%;
+  text-align: left;
+  border-bottom: 1px solid white;
+  flex: 1; }
+
+.tablink h4 {
+  margin: 0;
+  padding: 5px 0;
+}
+
+.tablink p,
+.tablink a {
+  display: none;
+}
+
+.tablink:first-of-type p,
+.tablink:first-of-type a {
+  display: block; 
+}
+
+.tablink:hover h4,
+.tablink:hover p,
+.tablink:hover a {
+  display: block;
+}
+
+.image-field {
+  position: relative;
+  height: 100%;
+}
+
+.content {
+  position: relative;
+  display: none; 
+  position: relative;
+  height: 100%;
+}
+
+.content img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.active {
+  display: block;
+}
+
+.active img {
+  display: block;
+  animation: panZoom 10s infinite alternate;
+}
+
+/* dot */
+.dot-container {
+  z-index: 10;
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.dot {
+  width: 10px;
+  height: 13px;
+  background-color: rgb(223, 207, 62); 
+  border-radius: 50%;
+}
+.dot.active {
+  background-color: rgb(231, 239, 247);
+  opacity: 1;
+}
+
+
+
+@keyframes panZoom {
+  0% {
+    transform: scale(1) translate(0, 0);
+  }
+  50% {
+    transform: scale(1.05) translate(3%, 3%);
+  }
+  100% {
+    transform: scale(1) translate(0, 0);
+  }
+}
