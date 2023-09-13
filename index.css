@@ -3,7 +3,7 @@ body {
   margin: 0;
   padding: 0;
   background-color: rgb(3, 3, 73);
-  overflow: hidden;
+  overflow: auto;
 }
 
 .header {
@@ -40,10 +40,12 @@ body {
 .tab-header p {
   color: rgb(160, 178, 201);
 }
+
 .tab-header a {
   text-decoration: none;
   color: rgb(253, 195, 0);
 }
+
 .tablink {
   padding: 10px;
   color: white;
@@ -53,7 +55,8 @@ body {
   width: 100%;
   text-align: left;
   border-bottom: 1px solid white;
-  flex: 1; }
+  flex: 1; 
+}
 
 .tablink h4 {
   margin: 0;
@@ -84,7 +87,6 @@ body {
 .content {
   position: relative;
   display: none; 
-  position: relative;
   height: 100%;
 }
 
@@ -124,12 +126,11 @@ body {
   background-color: rgb(223, 207, 62); 
   border-radius: 50%;
 }
+
 .dot.active {
   background-color: rgb(231, 239, 247);
   opacity: 1;
 }
-
-
 
 @keyframes panZoom {
   0% {
@@ -142,7 +143,6 @@ body {
     transform: scale(1) translate(0, 0);
   }
 }
-
 
 @media (max-width: 768px) {
   .container {
@@ -169,4 +169,3 @@ body {
     display: block;
   }
 }
-
