@@ -22,13 +22,11 @@ function openTab(tabName) {
         dots[2].style.backgroundColor = "rgb(231, 239, 247)";
     }
 
-    document.querySelectorAll(".dot").forEach(dot => {
-      dot.addEventListener("click", function() {
-          const tabName = this.getAttribute("data-tab");
-          openTab(tabName);
-      });
-  });
-  
+    // Show the hovered tab's content
+    const activeContent = document.getElementById(tabName);
+    activeContent.style.display = "block";
+
+
 
   // Show the hovered tab's content
   document.getElementById(tabName).style.display = "block";
@@ -55,15 +53,4 @@ function resetTab() {
 
 window.onload = function () {
   openTab("tab1");
-};
-
-window.onload = function () {
-    openTab("tab1");
-    
-    document.querySelectorAll(".dot").forEach(dot => {
-        dot.addEventListener("click", function() {
-            const tabName = this.getAttribute("data-tab");
-            openTab(tabName);
-        });
-    });
 };
